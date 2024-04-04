@@ -1,10 +1,8 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+////NOT WORKING I WAS JUST TRYING TO SEE IF I NEEDED NEW FOLDERS////
 
-
-export const Home = () => (
-	 <div className="text-center">
+/* function Card () {
+    return(
+        <div className="text-center">
 		<div className="card">
 			<img src="https://lumiere-a.akamaihd.net/v1/images/databank_rodia_01_169_6f76b79d.jpeg?region=0%2C0%2C1560%2C878" className="card-img-top" alt="Planet Rodian"/>
   			<h2>PLANETAS</h2>
@@ -20,6 +18,9 @@ export const Home = () => (
   			<h2>PERSONAS</h2>
   			<div id="planetInfo"> </div>
 	</div>
-	</div> 
-	
-);
+	</div>
+    )
+
+}
+
+export default Card */

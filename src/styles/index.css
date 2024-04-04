@@ -1,4 +1,31 @@
 /* 
     General Styles
 */
+.text-center {
+  background-color: black;
+}
 
+.card-container {
+  display: flex;
+  justify-content: space-between; 
+  background-color: black;
+  margin-top: 0%;
+}
+
+.card {
+  border: 10px solid #073723;
+  border-radius: 25px;
+  padding: 10px;
+  width: 400px; 
+  margin: 20px; 
+  display: inline-block;
+  color: yellow;
+  background-color: rgb(21, 20, 20);
+}
+  h2 {
+    margin-top: 0;
+  }
+  
+  #planetInfo {
+    margin-top: 10px;
+  }

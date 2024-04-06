@@ -1,6 +1,10 @@
 /* 
     General Styles
 */
+.h1 {
+  border-color: #073723;
+  border-radius: 10px;
+}
 .text-center {
   background-color: black;
 }

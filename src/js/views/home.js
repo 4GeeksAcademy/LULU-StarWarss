@@ -24,10 +24,13 @@ export const Home = () => (
 	</div>
 			{/* //necesita boton que conecte a personas// */}
 	<div className="card">
+		<Link to="/people">
 			<img src="https://lumiere-a.akamaihd.net/v1/images/tusken-raiders-main-bobf-2_135f8e1e.jpeg?region=0%2C0%2C1280%2C720" className="card-img-top" alt="Tusken Raiders"/>
   			<h2>PERSONAS</h2>
   			<div id="personasInfo"> </div>
-	</div> */
+			  </Link>
+
+	</div>
 	</div> 
 	
 );

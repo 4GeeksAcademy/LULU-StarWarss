@@ -9,7 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             naves: [],
             naves1: {},
             people: [],
-            people1: []
+            people1: {}
 
         },
         actions: {
@@ -20,13 +20,13 @@ const getState = ({ getStore, getActions, setStore }) => {
                     
                 } )
                     .catch(err => console.error(err))
-            }
-        },
+            },
+
 
         eachPlaneta: (id) => {
             fetch(`https://www.swapi.tech/api/planets/${id}`)
                 .then(res => res.json())
-                .then(data => {setStore({ planetas1:data.results }) 
+                .then(data => {setStore({ planetas1:data.result.properties }) 
                 
             } )
                 .catch(err => console.error(err)) 
@@ -44,7 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
     eachVehicle: (id) => {
         fetch(`https://www.swapi.tech/api/vehicles/${id}`)
             .then(res => res.json())
-            .then(data => {setStore({ naves:data.results }) 
+            .then(data => {setStore({ naves1:data.result.properties }) 
             
         } )
             .catch(err => console.error(err)) 
@@ -61,13 +61,13 @@ const getState = ({ getStore, getActions, setStore }) => {
     eachPeople1: (id) => {
         fetch(`https://www.swapi.tech/api/people/${id}`)
             .then(res => res.json())
-            .then(data => {setStore({ people1:data.results }) 
+            .then(data => {setStore({ people1:data.result.properties }) 
         
     } )
         .catch(err => console.error(err)) 
 },
 
 }
-};
+}};
 
 export default getState;

@@ -3,15 +3,12 @@ import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-//POR LO QUE SEA AHORA NO APARECEN Las naves Y Uncaught TypeError: actions.createVehicles is not a function
-
-
 const Naves =() => {
     const {store,actions}= useContext(Context)
     const naves= store.naves
 
 useEffect(() => { 
-    actions.createVehicles() //actions.createVehicles is not a function
+    actions.createVehicles()
 },[])
 useEffect(() => { 
  console.log(store.naves)
@@ -21,9 +18,14 @@ useEffect(() => {
     return(
         <>
         {naves?.map((naves,index,) => (
-            <div className="container" key={index}>
-            <h3><Link to="/naves" >{naves.name}</Link></h3>
+            <div className="card row row-cols-auto" key={index}>
+            <div className="card-body">
+              <h5 className="card-title">{naves.name}</h5>
+              <Link to={`/naves1/${naves.uid}`}>Click for more Info</Link>
+              <button>🎔</button>
             </div>
+          </div>
+            
         
         ))}
 

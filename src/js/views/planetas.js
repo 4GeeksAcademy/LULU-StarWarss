@@ -3,8 +3,6 @@ import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-//POR LO QUE SEA AHORA NO APARECEN LOS PLANETAS Y NO ME SALE NINGUN ERROR... 
-
 
 const Planetas =() => {
     const {store,actions}= useContext(Context)
@@ -21,9 +19,20 @@ useEffect(() => {
     return(
         <>
         {planets?.map((planetas,index,) => (
-            <div className="container" key={index}>
-            <h3><Link to="/planetas1" >{planetas.name}</Link></h3>
+            <div className="card row row-cols-auto" key={index}>
+            <div className="card-body">
+              <h5 className="card-title">{planetas.name}</h5>
+              <Link to={`/planetas1/${planetas.uid}`} >Click for more Info</Link> 
+              <button>🎔</button>
             </div>
+          </div>
+
+
+
+
+            /* <div className="container" key={index}>
+            <h3><Link to={`/planetas1/${planetas.uid}`} >{planetas.name}</Link></h3> {}
+            </div> */
         
         ))}
 

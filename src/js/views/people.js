@@ -22,7 +22,7 @@ const People =() => {
                <h5 className="card-title">{people.name}</h5>
                <Link to={`/people1/${people.uid}`}>Click for more Info
                     </Link>
-                    {/* <button className=""btn btn-warning onClick={actions.checkFavorito(people.name)}>🎔</button> */}
+                  <button className="btn btn-warning" onClick={() => {actions.checkFavorito(people.name)}}>🎔</button>
              </div>
            </div>
 

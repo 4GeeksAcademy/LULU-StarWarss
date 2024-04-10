@@ -69,22 +69,24 @@ const getState = ({ getStore, getActions, setStore }) => {
         .catch(err => console.error(err)) 
 },
     addFavorito:(favorito) => {
-        
-        setStore({ favoritos:getStore().favoritos.concat(favorito)}) //traer el favorito que ya tiene y anadir uno nuevo
+        console.log("este es el ADD",favorito)
+        setStore({ favoritos:getStore().favoritos.concat(favorito)})
+         console.log(getStore().favoritos)      //traer el favorito que ya tiene y anadir uno nuevo
     },
 
-    /* checkFavorito:(favorito) => {
-        const favorites = getStore().favorites;
-        if (favorites.indexOf(favorito) !== -1) {
+    checkFavorito:(favorito) => {
+        const favorites = getStore().favoritos;
+        if (favorites?.indexOf(favorito) !== -1) {
           getActions().removeFavorite(favorito);
         }
+        console.log("este es el check",favorito)
         getActions().addFavorito(favorito);
     },
 
     removeFavorite:(favorito) => {
         setStore({favoritos: getStore().favoritos.filter((element) => element !== favorito),})
         
-    } */
+    }
 }
 }};
 

@@ -9,7 +9,9 @@ const getState = ({ getStore, getActions, setStore }) => {
             naves: [],
             naves1: {},
             people: [],
-            people1: {}
+            people1: {},
+            favoritos: []
+            
 
         },
         actions: {
@@ -66,7 +68,23 @@ const getState = ({ getStore, getActions, setStore }) => {
     } )
         .catch(err => console.error(err)) 
 },
+    addFavorito:(favorito) => {
+        
+        setStore({ favoritos:getStore().favoritos.concat(favorito)}) //traer el favorito que ya tiene y anadir uno nuevo
+    },
 
+    /* checkFavorito:(favorito) => {
+        const favorites = getStore().favorites;
+        if (favorites.indexOf(favorito) !== -1) {
+          getActions().removeFavorite(favorito);
+        }
+        getActions().addFavorito(favorito);
+    },
+
+    removeFavorite:(favorito) => {
+        setStore({favoritos: getStore().favoritos.filter((element) => element !== favorito),})
+        
+    } */
 }
 }};
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
@@ -22,7 +22,7 @@ const People =() => {
                <h5 className="card-title">{people.name}</h5>
                <Link to={`/people1/${people.uid}`}>Click for more Info
                     </Link>
-                    <button>🎔</button>
+                    {/* <button className=""btn btn-warning onClick={actions.checkFavorito(people.name)}>🎔</button> */}
              </div>
            </div>
 

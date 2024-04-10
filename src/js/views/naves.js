@@ -22,18 +22,17 @@ useEffect(() => {
             <div className="card-body">
               <h5 className="card-title">{naves.name}</h5>
               <Link to={`/naves1/${naves.uid}`}>Click for more Info</Link>
-              <button>🎔</button>
+              
+              
             </div>
           </div>
             
-        
         ))}
 
         <Link to="/">
 			<button className="btn bnt-warning">Back Home</button>
 		</Link>
         </>
-    
     )
 }
 

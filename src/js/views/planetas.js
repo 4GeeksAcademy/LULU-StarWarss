@@ -27,13 +27,6 @@ useEffect(() => {
             </div>
           </div>
 
-
-
-
-            /* <div className="container" key={index}>
-            <h3><Link to={`/planetas1/${planetas.uid}`} >{planetas.name}</Link></h3> {}
-            </div> */
-        
         ))}
 
         <Link to="/">
